@@ -12,7 +12,7 @@ function requestJSON(url, callback) {
 $(function () {
     $('#update').on("click", function (e) {
         const username = $("#repo-username").val();
-        const user_activity_url = 'https://api.github.com/users/' + username + "/events";
+        const user_activity_url = 'https://api.github.com/users/' + username + "/events"; // /events?per_page=n, with n as a number. Allows to get a specific amount of events
         const user_repos_url = 'https://api.github.com/users/' + username + "/repos";
 
         // Local Storage (session), if not empty display the content
